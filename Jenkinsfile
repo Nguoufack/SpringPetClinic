@@ -66,7 +66,8 @@ pipeline{
                             usernameVariable: USER, passwordVariable: PWD)]){
             # object call should be done the square brackets
             sh "some script ${USER} ${PWD}"
-            # sh denote a shell script command
+            # sh denote a shell script command on linux, if the os is windows, use bash for example
+            bash "some script ${USER} ${PWD}"
           }
       }
     }
